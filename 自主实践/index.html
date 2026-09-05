@@ -21,6 +21,55 @@
     </section>
     <section id="form">
       <h2>表单正文</h2>
+      <form action="#" method="get">
+        <p>
+          <label for="name">姓名</label>
+          <input type="text" id="name" name="name" placeholder="请填写您的真实姓名" required>
+        </p>
+        <p>
+          <label for="studentid">学号</label>
+          <input type="text" id="studentid" name="studentid" pattern="[0-9]{11}" minlength="11" maxlength="11" placeholder="请填写您的学号" title="学号必须是11位阿拉伯数字" required>
+        </p>
+        <p>
+          <label for="telephone">电话号码</label>
+          <input type="text" id="telephone" name="telephone" pattern="[0-9]{11}" minlength="11" maxlength="11" placeholder="请填写您的电话号码" title="电话号码必须是11位阿拉伯数字" required>
+        </p>
+        <p>性别</p>
+        <p>
+          <label><input type="radio" name="gender" value="男" required>男</label>
+          <label><input type="radio" name="gender" value="女">女</label>
+        </p>
+        <label for="age">球龄（年）</label>
+        <input type="number" id="age" name="age" min="0" max="20" required placeholder="0-20" inputmode="numeric">
+        <p>请选择您的打法</p>
+        <p>
+          <label for="playing-style">打法</label>
+          <select id="playing-style" name="playing-style" required>
+            <option value="横板两面弧圈">横板两面弧圈</option>
+            <option value="直板横打">直板横打</option>
+            <option value="传统直板">传统直板</option>
+            <option value="直板长胶">直板长胶</option>
+            <option value="直板正胶">直板正胶</option>
+            <option value="削球（反胶）">削球（反胶）</option>
+            <option value="削球（颗粒）">削球（颗粒）</option>
+            <option value="防弧">防弧</option>
+          </select>
+        </p>
+        <p>加入社团的目的(可多选)</p>
+        <p>
+          <label><input type="checkbox" name="purpose" value="参与校内交流赛" required>参与校内交流赛</label>
+          <label><input type="checkbox" name="purpose" value="参与校外赛事">参与校外赛事</label>
+          <label><input type="checkbox" name="purpose" value="找球搭子">找球搭子</label>
+          <label><input type="checkbox" name="purpose" value="向高手学习">向高手学习</label>
+        </p>
+        <p>
+          <label for="introduce">自我介绍（一百字以内）</label><br>
+          <textarea id="introduce" name="introduce" rows="4" maxlength="200" placeholder="介绍一下自己吧~" required></textarea>
+        </p>
+        <p>
+          <button type="submit">提交反馈</button>
+        </p>
+      </form>
     </section>
   </main>
   <footer>
